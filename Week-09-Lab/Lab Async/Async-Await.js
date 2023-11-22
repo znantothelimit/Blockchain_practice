@@ -15,7 +15,7 @@ function getData() {
 // Define Async Fn
 async function getDataAsync() {
   try {
-    // ºñµ¿±â ÀÛ¾÷À» ¼öÇàÇÏ°í °á°ú¸¦ ¾ò±â À§ÇØ await »ç¿ë
+    // ë¹„ë™ê¸° ì‘ì—…ì„ ìˆ˜í–‰í•˜ê³  ê²°ê³¼ë¥¼ ì–»ê¸° ìœ„í•´ await ì‚¬ìš©
     console.log("Starting in getDataAsync() ...");
     const result = await getData();
     console.log("Waiting Result ...");

@@ -1,0 +1,41 @@
+c:\...> pip install web3
+c:\...> python
+Python 3.11.1 ...
+
+from web3 import Web3
+from eth_account import Account
+
+# Generate Priv Key
+private_key = Account.create().key
+
+# Create Account
+account = Account.from_key(private_key)
+
+# Generate Address
+address = account.address
+
+print("Private Key:", private_key.hex())
+print("Address:", address)
+
+
+*******************************************************************
+
+c:\...> python
+Python 3.10.11 ...
+
+>>> from secrets import token_bytes
+>>> from coincurve import PublicKey
+# pip install coincurve
+
+>>> from sha3 import keccak_256
+
+# pip install pysha3
+# 'pystrhex.h': No such file or directory
+# Solution : Downgrading to Python-3.10.x
+
+>>> priKey = keccak_256(token_bytes(32)).digest()
+>>> pubKey = PublicKey.from_valid_secret(priKey).format(compressed=False)[1:]
+>>> addr = keccak_256(pubKey).digest()[-20:]
+
+>>> print('priKey:', priKey.hex())
+>>> print('eth addr: 0x' + addr.hex())

@@ -1,0 +1,34 @@
+* Install nodejs
+* Install Ganache
+
+* Start Ganache
+
+c:\...> cd Lab-sc
+c:\...> npm init
+c:\...> npm install web3@1.10.3 // web3 version 맞춰주기 필수!!
+c:\...> npm list web3
+c:\...> npm install -g solc@0.8.0
+c:\...> npm list
+c:\...> solcjs --version
+c:\...> solcjs --bin --abi Hello.sol
+   Hello.bin
+   Hello.abi
+
+// 이후 단 node에서 실행
+c:\...> node
+> bytecode = '0x' + fs.readFileSync('Hello_sol_Hello.bin').toString()
+> abi = JSON.parse(fs.readFileSync('Hello_sol_Hello.abi').toString())
+> const Web3 = require('web3') // 그냥 npm i web3 하면 web3 version이 맞지 않음 -> constructor에서 오류가 생김 -> 위에처럼 재설치해야합니다  
+> const web3 = new Web3("http://127.0.0.1:7545")
+> helloContract = new web3.eth.Contract(abi)
+> fromAddr = "0xB271F69fF7C88CdCA1fC90004C4B7A97025F0B8B" // fromAddr은 나의 주소 (개발자의 EOA -> gas 필요, balance 충분한지 확인)
+// 밑에거 실행 시 오류 발생 -> parameter 수정했기 때문(.sol파일 내 constructor로 초기화했기 때문) -> solc version 수정 (npm i -g solc@0.8.0)
+> helloContract.deploy({data:bytecode, arguments: ["Hello kekemon ..."],}).send({from:fromAddr, gas:1700000, gasPrice:web3.utils.toWei('0.00005', 'ether')}).then((newContractInstance) => {helloContract.options.address=newContractInstance.options.address}); // 이후 아까 fromAddr의 balance 줄어듦을 확인 -> 잘못짜면 balance 엄청줄어듦 검증필수
+> fromAddr = "0x829239c3f345021880b0eb6470251c230535f59F" // 초기의 fromAddr balance 줄어들어서 다른 주소로 다시
+> helloContract.deploy({data:bytecode, arguments: ["Hello kekemon ..."],}).send({from:fromAddr, gas:170000, gasPrice:web3.utils.toWei('0.00005', 'ether')}).then((newContractInstance) => {helloContract.options.address=newContractInstance.options.address}); // 이후 아까 fromAddr의 balance 적당히 줄어듦을 확인, 바뀐 주소로 재실행
+> helloContract.methods
+> helloContract.methods.getGreeting().call().then(console.log)
+> helloContract.methods.setGreeting("kekemon ...").send({from:'0x9F98Bd02088BF90A43509980a8201C768208f3bE'}).then((f) => console.log(f))
+
+> helloContract.options
+> helloContract.options.address

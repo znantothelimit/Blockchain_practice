@@ -1,0 +1,11 @@
+pip install requests
+python utxo.py
+
+
+https://www.blockchain.com/explorer/api
+	Developers
+		Blockchain Data API
+			Unspent Outputs
+			https://blockchain.info/unspent?active=$address
+
+

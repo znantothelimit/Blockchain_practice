@@ -1,0 +1,34 @@
+<head>
+	<meta charset="UTF-8" />
+	<script src="http://code.jquery.com/jquery-latest.js "></script>
+	<script type="text/javascript" src="./js/web3.min.js"></script>
+	<script type="text/javascript" src="./js/qrcode.js"></script>
+
+	<title>My Ethereum Wallet</title>
+	<script>
+		$(document).ready(function () {
+			// npm i qrcode
+			// node가 아닌 browser환경에서는 injected Web3 (이미 require 되어있음)
+			let web3 = new Web3("http://127.0.0.1:7545");
+			console.log(web3);
+			console.log("Start ...");
+			
+			// #acoountList가 js에서 Promise 처리되어 accounts로 리턴
+			web3.eth.getAccounts().then((accounts) => {
+				console.log('in getAccounts().then() =', accounts.length);
+				console.log(accounts);
+				const accountsElements = accounts.map( // .map 은 배열 돌면서 looping하여 묶음
+            (_account) => "<li> " + _account + "</li>"
+				);
+				$("#accountList").html('<ol>' + accountsElements + '</ol>');
+			});
+		});
+	</script>
+</head>
+
+<body>
+   <div>
+      <font color=blue size=5>Account List</font>
+      <div id=accountList></div> 
+   </div>
+</body>

@@ -1,0 +1,19 @@
+1. Write Smart Contract Code <- Solidity 언어
+    sc = functions running on the EVM
+2. Build Smart Contract <- solcjs <- npm i solc
+    EVM Byte Code
+    ABI
+3. Deploy Smart Contract
+    Deploy Tx 
+            -> CA (Contract Account) 
+    Need Ethereum Platform (our Env is not mainnet, is Ganache(Local Eth Platform))
+4. Testing Smart Contract
+    function call
+                -> get : no Tx -> no fee(gas)
+                -> set : Tx -> fee(gas) needed
+    write code -> javascript -> node js
+    web3.js <- npm i web3
+
+* version checking (npm list solc, npm i web3)
+  npm install pkg(@latest) : install latest version of package / using @4.2.2 option -> 4.2.2 version install
+* Smart Contract running Env

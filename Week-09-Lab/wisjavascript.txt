@@ -1,0 +1,42 @@
+비동기 (Asynchrounous Operation) : 실행은 하는데 결과 안나와도 다른거 실행
+    
+    Callback
+    Promise
+    Async
+    Await
+
+    <-> 동기 (Synchrounous) : 처리가 끝날 때까지 기다리는 방식
+
+if)--------------
+
+console.log('1');
+console.log('2');
+asyncFunction();
+console.log('3');
+console.log('4');
+console.log('5');
+
+// setTimeout(a, b); -> a는 기다리는 시간 이후 실행할 것(화살표 함수(callback함수 또는 비동기 함수)), b는 기다리는 시간
+// Deploy 시 b로 기다리는 시간 정확히 계산할 수가 없음 -> 비동기 처리 필수
+// await deploy(); // So, awiat로 비동기 처리 필수!!!
+setTimeout(()=> {
+    console.log("\n5 seconds have passed...\n",)
+}, 5000); 
+
+// javascript에서는 함수 호출 시 인자로 함수를 넣을 수 있음 -> callback 함수
+function b () {
+    ...
+}
+function my() {
+    ...
+}
+my(b); 
+
+(async () => {...})();
+// 익명함수 => 함수 이름이 없는 함수
+// 화살표 함수 : (a) => {...}
+function async aa(x){
+    ...
+}
+
+-----------------

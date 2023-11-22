@@ -1,0 +1,57 @@
+satoshi nakamoto
+"bitcoin: a peer-to-peer electronic cash system"
+
+https://www.bithumb.com/
+
+
+Nonce : 2,083,236,893
+0000000000xxx
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+mempool.space
+0000000000000000000084b229ceba708dc9a4aa37c796ce956df5d1c1002f5e
+
+
+21,000,000
+	210,000
+반감기
+50 -> 25 -> 12.5 -> 6.25 -> 3.125 -> 1.5xx ->
+
+
+* blockchain.com/explorer
+https://www.blockchain.com/explorer/blocks/btc/0
+
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+https://blockchain.info/rawblock/$block_hash
+https://blockchain.info/rawblock/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+
+
+https://api.blockchair.com/bitcoin/raw/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+
+
+https://blockchain.info/rawblock/
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+0000000000000000000b6963181cef130dd8f3a5fdccb2966a77c41139b4f05
+
+
+https://api.blockchair.com/bitcoin/raw/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+
+
+wallet address for satoshi nakamoto
+1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+
+
+mempool.sapce
+
+
+금융감독위원회, OpenAPI 제공
+https://developers.kftc.or.kr/
+
+
+https://bitnodes.io/
+
+

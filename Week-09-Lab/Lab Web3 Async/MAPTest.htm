@@ -1,0 +1,24 @@
+<head>
+	<meta charset="UTF-8" />
+	<script src="http://code.jquery.com/jquery-latest.js "></script>
+
+	<title>My Ethereum Wallet</title>
+	<script>
+		$(document).ready(function () {
+			accounts = ['aa', 'bb', 'cc'];
+			const accountsElements = accounts.map(
+				(_account) => "<div><li>" + _account + "</li></div>"
+			);
+			console.log(accountsElements);
+			console.log("After accountsElements ...");
+			$("#accountList").html(accountsElements);
+		});
+	</script>
+</head>
+
+<body>
+   <div>
+      <font color=blue size=5>Account List</font>
+      <div id=accountList></div>
+   </div>
+</body>

@@ -1,0 +1,22 @@
+{
+  "name": "smartcontract_practice",
+  "version": "1.0.0",
+  "description": "ETH_smartcontract_practice_231115lecture",
+  "main": "deployContract.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znantothelimit/Blockchain_practice.git"
+  },
+  "author": "kekemon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/znantothelimit/Blockchain_practice/issues"
+  },
+  "homepage": "https://github.com/znantothelimit/Blockchain_practice#readme",
+  "dependencies": {
+    "web3": "^1.10.3"
+  }
+}

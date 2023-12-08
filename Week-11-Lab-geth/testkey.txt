@@ -1,4 +1,0 @@
-Your new key was generated
-
-Public address of the key:   0x604BbBc6225C4D571c2a672B61153c9119b215F9
-Path of the secret key file: test\keystore\UTC--2023-12-06T03-55-05.480281400Z--604bbbc6225c4d571c2a672b61153c9119b215f9

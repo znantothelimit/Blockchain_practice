@@ -1,0 +1,15 @@
+c:\...> pip install web3
+
+c:\...> python
+
+>>> import binascii
+>>> from web3.auto import w3
+>>> with open("test/keystore/UTC-...-c406ab480daa2d39281b73913d62e284bd468971") as keyfile:
+   encrypted_key = keyfile.read()
+   privKey = w3.eth.account.decrypt(encrypted_key, 'c')
+
+>>> privKey
+>>> privHex = privKey.hex()
+>>> privHex
+
+>>> exit()
